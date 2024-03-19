@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- <style>
+        body {
+            background-color: gray;
+        }
+    </style> -->
+    <!-- <h1 onclick="clickMe()">Java Script Basics</h1>
+
+    <input type="text" id="input" />
+    <button onclick="add()">Click to add</button>
+    <div id="demo">
+        <ul id="list"></ul>
+    </div> -->
+
+    <div>
+      <input type="number" id="er_no" placeholder="er_no" />
+      <input type="text" id="name" placeholder="name" />
+      <input type="number" id="mobile" placeholder="mobile" />
+      <input type="text" id="address" placeholder="address" /><br />
+      <button onclick="submit()">submit</button>
+    </div>
+
+    <div>
+      <table id="student_record">
+        <tr>
+          <th>Er no</th>
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>Address</th>
+        </tr>
+        <tr>
+          <td>12345</td>
+          <td>Kaushal</td>
+          <td>1234535</td>
+          <td>hfhfhfgf</td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+        
+      var students = [];
+
+      function submit() {
+        const student_obj = {
+          er_no: document.getElementById("er_no").value,
+          name: document.getElementById("name").value,
+          mobile: document.getElementById("mobile").value,
+          address: document.getElementById("address").value,
+        };
+
+        students.push(student_obj);
+        console.log(students);
+        students.forEach((el) => {
+          // debugger;
+          let element = `
+                <tr>
+                    <td>${el.er_no}</td>
+                    <td>${el.name}</td>
+                    <td>${el.mobile}</td>
+                    <td>${el.address}</td>
+                </tr>
+                `;
+
+          document.getElementById("student_record").innerHTML += element;
+        });
+      }
+    </script>
+  </body>
+</html>

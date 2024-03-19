@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="enter your sr." id="sr_no">
+        <input type="text" placeholder="name" id="name">
+        <input type="number" placeholder="number" id="number">
+        <input type="email" placeholder="email" id="email">
+        <button onclick="hello()">submit</button>
+    </div>
+
+    <div>
+        <table id="student_record">
+            <tr>
+                <th>sr_no.</th>
+                <th>name</th>
+                <th>number</th>
+                <th>email</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Kaushal</td>
+                <td>1234567789</td>
+                <td>Kaushal@gmail.com</td>
+            </tr>
+        </table>
+    </div>
+
+     <script>
+    //     var students=[];
+
+    //     function submit(){
+    //         const student_obj = {
+    //       er_no: document.getElementById("sr_no").value,
+    //       name: document.getElementById("name").value,
+    //       mobile: document.getElementById("mobile").value,
+    //       address: document.getElementById("address").value,
+    //     };
+    
+
+    //    students.push(student_obj);
+    //    console.log(students);
+
+    //    students.forEach((item) => {
+    //     let element = `
+    //     <tr>
+    //         <td>${item.sr_no}</td>
+    //         <td>${item.name}</td>
+    //         <td>${item.number}</td>
+    //         <td>${item.email}</td>
+    //         `;
+
+    //         document.getElementById("student_record").innerHTML += element;
+    //    });
+    // } -->
+
+    
+
+    var students = [];
+
+    function hello() {
+            const student_obj = {
+                er_no: document.getElementById("sr_no").value,
+                name: document.getElementById("name").value,
+                mobile: document.getElementById("mobile").value,
+                address: document.getElementById("address").value,
+            }
+            hello()
+            
+
+      students.push(student_obj);
+      console.log(students);
+      students.forEach((el) => {
+        // debugger;
+        let element = `
+              <tr>
+                  <td>${el.er_no}</td>
+                  <td>${el.name}</td>
+                  <td>${el.mobile}</td>
+                  <td>${el.address}</td>
+              </tr>
+              `;
+
+        
+      });
+      document.getElementById("student_record").innerHTML += element;
+    }
+
+       
+    </script>
+
+</body>
+</html>
